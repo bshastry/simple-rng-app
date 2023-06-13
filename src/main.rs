@@ -6,7 +6,6 @@ use rand::SeedableRng;
 
 fn parser(matches: &ArgMatches) -> u64 {
     let seed = matches.value_of("seed").unwrap_or("None");
-    println!("The seed passed is: {}", seed);
     let seed_num: u64 = match seed.parse() {
         Ok(n) => {
             println!("The seed is {}.", n);
